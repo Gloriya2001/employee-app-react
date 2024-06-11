@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
+import axios from 'axios'
 
 const Add = () => {
 
@@ -21,6 +22,25 @@ const Add = () => {
 
         console.log(data)
 
+        axios.post("http://localhost:8080/add", data).then(
+
+            (response) => {
+
+                if (response.data.status == "success") {
+                    alert("Successfully Added")
+                } else {
+                    alert("error")
+
+                }
+
+
+            }
+
+        )
+
+
+
+
     }
 
 
@@ -39,7 +59,7 @@ const Add = () => {
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                                 <label htmlFor="" className="form-label">Employee Id</label>
-                                <input type="text" className="form-control" name='empId' value={data.empId} onChange={inputHandler}/>
+                                <input type="text" className="form-control" name='empId' value={data.empId} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
