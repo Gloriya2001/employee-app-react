@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const View = () => {
     return (
         <div>
-
+            <Navbar />
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -14,14 +15,14 @@ const View = () => {
                                 <tr>
                                     <th scope="col">Employee Id</th>
                                     <th scope="col">Employee Name</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    
+
                                 </tr>
 
                             </tbody>
